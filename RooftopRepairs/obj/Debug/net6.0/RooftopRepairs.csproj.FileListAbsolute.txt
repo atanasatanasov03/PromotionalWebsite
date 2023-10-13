@@ -28,3 +28,4 @@ C:\Users\naska\source\repos\RooftopRepairs\RooftopRepairs\obj\Debug\net6.0\refin
 C:\Users\naska\source\repos\RooftopRepairs\RooftopRepairs\obj\Debug\net6.0\RooftopRepairs.pdb
 C:\Users\naska\source\repos\RooftopRepairs\RooftopRepairs\obj\Debug\net6.0\RooftopRepairs.genruntimeconfig.cache
 C:\Users\naska\source\repos\RooftopRepairs\RooftopRepairs\obj\Debug\net6.0\ref\RooftopRepairs.dll
+C:\Users\naska\source\repos\RooftopRepairs\RooftopRepairs\bin\Debug\net6.0\libman.json

@@ -6,4 +6,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="app\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Media\roof-before_after.jpg" />
+    <None Include="wwwroot\Media\tiling.jpg" />
+  </ItemGroup>
+
 </Project>
