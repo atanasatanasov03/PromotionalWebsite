@@ -1,24 +1,81 @@
 html {
   font-size: 14px;
-  position: relative;
   min-height: 100%;
+}
 
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 body {
     padding-top: 56px;
-    margin-bottom: 60px;
+    padding-bottom: 60px;
+    position: relative;
+    &::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: url("https://images.pexels.com/photos/45206/roofing-tile-red-wall-45206.jpeg?auto=compress&cs=tinysrgb&w=4016&h=6016&dpr=1");
+    background-size: cover;
+    opacity: 0.6;
+}
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vw;
+    overflow: hidden;
+    position: absolute;
+}
+
+.sliding-background {
+    background: url("https://images.pexels.com/photos/45206/roofing-tile-red-wall-45206.jpeg?auto=compress&cs=tinysrgb&w=4016&h=6016&dpr=1") repeat-x;
+    background-repeat: repeat-y;
+    background-size: cover;
+    width: 4016px;
+    height: 6016px;
+    animation: slide 120s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes slide {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, -4016px, 0);
+    }
 }
 
 .home-container {
+    position: sticky;
     height: 30rem;
-    background-color: darkred;
+    background-color: rgba(52, 86, 139, 0.9);
 }
 
-.container-inside {
-    background-color: black;
-    height: 25rem;
-    width: 63rem;
+.home-link {
+    opacity: 0.9;
+}
+
+.home-link:hover {
+    opacity: 0.75;
+}
+
+.per-col1 {
+    height: 100%;
+    width: 40%;
+    background-color: rgba(146, 168, 209, 0.7);
+}
+
+.per-col2 {
+    height: 100%;
+    width: 60%
 }
 
 @media screen and (max-width: 1700px) {
@@ -38,7 +95,6 @@ body {
         max-width: 41.75rem;
     }
 }
-
 
 @media screen and (max-width: 1150px) {
     .container-inside {
