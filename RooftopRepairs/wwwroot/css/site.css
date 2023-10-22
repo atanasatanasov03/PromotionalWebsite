@@ -1,18 +1,36 @@
 html {
-  font-size: 14px;
-  min-height: 100%;
+    min-height: 100vh;
+    max-height: fit-content;
+    max-width: 100vw;
 }
 
-#footer {
+* {
+    font-family: 'Noto', serif; /*
+    font-style: normal;
+    font-weight: 400;*/
+}
+
+footer {
     position: absolute;
     bottom: 0;
     width: 100%;
+    background-color: #3650a1;
+    font-size: min(1.5vw, 17px);
+    height: min(60px);
+}
+
+footer .container {
+    margin: 0px 20vh 0px 20vh;
+    text-align: left;
 }
 
 body {
+    min-height: 100vh;
+    min-width: 100vw;
     padding-top: 56px;
     padding-bottom: 60px;
     position: relative;
+    overflow-x: hidden;
     &::before {
     content: '';
     position: absolute;
@@ -26,37 +44,134 @@ body {
 }
 }
 
-.wrapper {
+header {
+    position: fixed !important;
+    top: 0;
     width: 100vw;
-    height: 100vw;
-    overflow: hidden;
+    height: 6.5rem;
+    z-index: 7;
+    background-image: linear-gradient(#3456e5,#3650a1);
+}
+
+.navbar {
     position: absolute;
+    width: 100%;
+    margin-top: 3rem;
 }
 
-.sliding-background {
-    background: url("https://images.pexels.com/photos/45206/roofing-tile-red-wall-45206.jpeg?auto=compress&cs=tinysrgb&w=4016&h=6016&dpr=1") repeat-x;
-    background-repeat: repeat-y;
-    background-size: cover;
-    width: 4016px;
-    height: 6016px;
-    animation: slide 120s linear infinite;
-    animation-direction: alternate;
+.offcanvas-body {
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-@keyframes slide {
-    0% {
-        transform: translate3d(0, 0, 0);
-    }
+.sidebar .offcanvas .offcanvas-start .show {
+    background-color: #fff;
+}
 
-    100% {
-        transform: translate3d(0, -4016px, 0);
-    }
+.top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3rem;
+    width: 100%;
+    padding: 15px;
+    font-size: max(1vw, 20px);
+}
+
+h1, h2 {
+    font-size: min(3vw, 60px);
+    min-height: 0;
+    margin-bottom: 5%;
+    font-weight: bold;
+}
+
+h3, h4 {
+    font-size: min(2vw, 40px);
+    min-height: 0;
+    margin-top: 5%;
+}
+
+h5 {
+    font-size: min(1.5vw, 30px);
+    min-height: 0;
+    margin: 1vh 0 1vh 0;
+    font-weight: 200;
+}
+
+.image-responsive {
+    max-width: 700px;
+}
+
+.navbar {
+    width: 100vw;
+}
+
+.navbar-brand {
+    font-size: 25px;
+}
+
+.nav-item a {
+    font-size: 18px !important
+}
+
+.capsule {
+    margin-top: 5rem;
 }
 
 .home-container {
     position: sticky;
+    width: min(1344px, 70vw);
     height: 30rem;
-    background-color: rgba(52, 86, 139, 0.9);
+    background-color: rgba(54,80,161, 0.93);
+    margin-top: 3vh;
+}
+
+.services-container {
+    position: sticky;
+    width: min(1344px, 70vw);
+    height: 60rem;
+    background-color: rgba(54,80,161, 0.93);
+    margin-top: 3vh;
+}
+
+.table-container {
+    width: min(1280px, 60w);
+    height: 55rem;
+    padding: 3% 3% 3% 3%; 
+}
+
+.gallery-container {
+    position: sticky;
+    width: min(1344px, 70vw);
+    height: 40rem;
+    background-color: rgba(54,80,161, 0.93);
+    margin-top: 3vh;
+}
+
+.carousel-container {
+    width: min(1280px, 60w);
+    height: 25rem;
+}
+
+.spaced {
+  height: 100%;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0;
+}
+
+.sup {
+    position: relative;
+    bottom: 1ex;
+    font-size: 80%;
+}
+
+.my-row {
+    height: 7rem;
 }
 
 .home-link {
@@ -70,56 +185,79 @@ body {
 .per-col1 {
     height: 100%;
     width: 40%;
+}
+
+.li-blu {
     background-color: rgba(146, 168, 209, 0.7);
 }
 
 .per-col2 {
     height: 100%;
-    width: 60%
+    width: 60%;
 }
 
+
+/*
 @media screen and (max-width: 1700px) {
-    .container-inside {
-        max-width: 57.25rem;
-    }
+    
+    
 }
 
 @media screen and (max-width: 1500px) {
-    .container-inside {
-        max-width: 48.75rem;
-    }
+    
+    
 }
 
 @media screen and (max-width: 1350px) {
-    .container-inside {
-        max-width: 41.75rem;
-    }
+    
 }
+*/
 
-@media screen and (max-width: 1150px) {
-    .container-inside {
-        max-width: 33.15rem;
+@media only screen and (max-width: 12000px) {
+    body {
+        font-size: 75%;
+    }
+    .home-container {
+        height: min(30rem, 60vw);
     }
 }
 
 @media screen and (max-width: 991px) {
     .sidebar {
         background-color: rgba(72, 84, 96, 1);
-    } 
-    .home-container {
-        max-height: 15rem;
+        max-width: 100vw;
     }
-    .container-inside {
-        max-height: 12.5rem;
-        max-width: 26.50rem;
+    .navbar-brand {
+        font-size: 18px;
+    }
+    #offcanvasNavbarLabel {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .top-bar {
+        font-size: max(1vw, 13px);
     }
 }
 
 @media screen and (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-  body {
+    body {
         padding-top: 49px !important;
-   }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .navbar-brand {
+        font-size: 12px;
+    }
+    #offcanvasNavbarLabel {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .top-bar {
+        font-size: max(1vw, 9px);
+    }
 }

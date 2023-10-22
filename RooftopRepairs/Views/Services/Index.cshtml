@@ -1,10 +1,144 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Services Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>SERVICES</p>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title px-2" id="exampleModalLongTitle">Заглавие на услугата</h3>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="border:none; background-color:transparent;">
+                    <i class="fa-sharp fa-solid fa-x fa-lg" style="color: #3650a1; vertical-align:sub"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex-column p-4">
+                    <div class="d-flex flex-row" style="font-size: 5rem">
+                        CAROUSEL
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div class="p-2 flex-md-fill">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo sapien, sollicitudin sed gravida et, dictum vel ex. Sed dignissim tincidunt odio. Suspendisse posuere turpis rhoncus, dignissim ex ac, dictum ante. Vivamus condimentum egestas ante nec ultricies.
+                        </div>
+                        <div class="p-2 flex-md-fill">Quisque dolor nulla, consequat vel felis sit amet, tempus bibendum felis. Fusce non leo quis diam condimentum consectetur in nec magna. Nullam dapibus metus a sapien venenatis tincidunt.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="capsule">
+    <!--Services Table-->
+    <div class="d-flex services-container py-5 px-4 align-items-center justify-content-around">
+        <div class="table-container li-blu">
+            <table class="m-auto table table-striped table-hover">
+                <tbody>
+                    <tr class="my-row w-100">
+                        <th class="align-middle text-white w-25" scope="row">Хидроизолация на покриви</th>
+                        <td class="align-middle text-white w-50">
+                            <div class="d-flex justify-content-between">
+                                <div class="flex-col w-75">
+                                    <ul>
+                                        <li>Газопламачно залепване на един Пласт Хидроизолация със Посипка 4мм на м² SALABO Полиестер</li>
+                                        <li>Сваляне на филц от покрива и извозване до сметището</li>
+                                        <li>Преместване на филц от една страна на друга</li>
+                                    </ul>
+                                </div>
+                                <div class="flex-col w-25">
+                                    <ul class="spaced">
+                                        <li>5,50 лв/м<span class="sup">2</span></li>
+                                        <li>17,80 лв/м</li>
+                                        <li>3,30 лв/м2</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="align-middle text-white w-25">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLong">
+                                Повече детайли
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="my-row w-100">
+                        <th class="align-middle text-white w-25" scope="row">Ремонт на покриви</th>
+                        <td class="align-middle text-white w-50">
+                            <div class="d-flex justify-content-between">
+                                <div class="flex-col w-75">
+                                    <ul>
+                                        <li>Газопламачно залепване на един Пласт Хидроизолация със Посипка 4мм на м² SALABO Полиестер</li>
+                                        <li>Сваляне на филц от покрива и извозване до сметището</li>
+                                        <li>Преместване на филц от една страна на друга</li>
+                                    </ul>
+                                </div>
+                                <div class="flex-col w-25">
+                                    <ul class="spaced">
+                                        <li>5,50 лв/м<span class="sup">2</span></li>
+                                        <li>17,80 лв/м</li>
+                                        <li>3,30 лв/м2</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="align-middle text-white w-25">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLong">
+                                Повече детайли
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="my-row w-100">
+                        <th class="align-middle text-white w-25" scope="row">Тенекеджийство</th>
+                        <td class="align-middle text-white w-50">
+                            <div class="d-flex justify-content-between">
+                                <div class="flex-col w-75">
+                                    <ul>
+                                        <li>Газопламачно залепване на един Пласт Хидроизолация със Посипка 4мм на м² SALABO Полиестер</li>
+                                        <li>Сваляне на филц от покрива и извозване до сметището</li>
+                                        <li>Преместване на филц от една страна на друга</li>
+                                    </ul>
+                                </div>
+                                <div class="flex-col w-25">
+                                    <ul class="spaced">
+                                        <li>5,50 лв/м<span class="sup">2</span></li>
+                                        <li>17,80 лв/м</li>
+                                        <li>3,30 лв/м2</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="align-middle text-white w-25">Повече детайли</td>
+                    </tr>
+                    <tr class="my-row w-100">
+                        <th class="align-middle text-white w-25" scope="row">Изграждане</th>
+                        <td class="align-middle text-white w-50">
+                            <div class="d-flex justify-content-between">
+                                <div class="flex-col w-75">
+                                    <ul>
+                                        <li>Газопламачно залепване на един Пласт Хидроизолация със Посипка 4мм на м² SALABO Полиестер</li>
+                                        <li>Сваляне на филц от покрива и извозване до сметището</li>
+                                        <li>Преместване на филц от една страна на друга</li>
+                                    </ul>
+                                </div>
+                                <div class="flex-col w-25">
+                                    <ul class="spaced">
+                                        <li>5,50 лв/м<span class="sup">2</span></li>
+                                        <li>17,80 лв/м</li>
+                                        <li>3,30 лв/м2</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="align-middle text-white w-25">Повече детайли</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
