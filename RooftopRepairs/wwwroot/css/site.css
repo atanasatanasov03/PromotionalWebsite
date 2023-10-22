@@ -18,9 +18,9 @@ footer {
     font-size: min(1.5vw, 17px);
     height: min(60px);
 }
-
+    
 footer .container {
-    margin: 0px 20vh 0px 20vh;
+    margin: 0px min(20px, 20vh) 0px min(20px, 20vh);
     text-align: left;
 }
 
@@ -149,9 +149,27 @@ h5 {
     margin-top: 3vh;
 }
 
+#gallery {
+    margin-top: 4.1rem;
+    margin-bottom: 1rem;
+}
+
 .carousel-container {
     width: min(1280px, 60w);
     height: 25rem;
+}
+
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: auto;
+    object-fit: cover
+}
+
+#carImage {
+
 }
 
 .spaced {

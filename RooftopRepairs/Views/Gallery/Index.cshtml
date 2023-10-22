@@ -2,13 +2,44 @@
     ViewData["Title"] = "Gallery Page";
 }
 
-<div class="capsule">
+<div class="capsule" id="gallery">
     <div class="gallery-container d-flex-column p-5">
         <div class="carousel-container li-blu d-flex flex-row p-4" style="font-size: 5rem">
-            CAROUSEL
+            <div id="imagesCarousel" class="carousel slide w-100" data-ride="carousel" style="overflow: hidden;">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="position: relative">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/teslarooftoprepair.appspot.com/o/CarImage%2Fviber_image_2023-10-11_11-10-51-458.jpg?alt=media&token=0c815066-d547-403a-a5d9-a515b0d3bcfd"
+                             class="img image-responsive" />
+                    </div>
+                    <div class="carousel-item" style="position: relative">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/teslarooftoprepair.appspot.com/o/CarImage%2Fviber_image_2023-10-11_11-10-51-704.jpg?alt=media&token=fc7ab500-7680-40dd-b0fa-b4012dbc209c"
+                             class="img image-responsive" />
+                    </div>
+                    <div class="carousel-item" style="position: relative">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/teslarooftoprepair.appspot.com/o/CarImage%2Fviber_image_2023-10-11_11-11-32-660.jpg?alt=media&token=5636ba79-6104-4418-a013-d032b887f582"
+                             class="img image-responsive" />
+                    </div>
+                    <div class="carousel-item" style="position: relative">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/teslarooftoprepair.appspot.com/o/CarImage%2Fviber_image_2023-10-11_11-11-29-789.jpg?alt=media&token=2ce8cf05-c0b5-48e6-b255-6e2a5d3ed9c6"
+                             class="img image-responsive" />
+                    </div>
+                    <div class="carousel-item" style="position: relative">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/teslarooftoprepair.appspot.com/o/CarImage%2Fviber_image_2023-10-11_11-11-31-550.jpg?alt=media&token=e8c022c1-2839-43d8-8c41-56ae105ee46a"
+                             class="img image-responsive" />
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#imagesCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#imagesCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
-        <div class="d-flex flex-row p-4">
-            Quisque dolor nulla, consequat vel felis sit amet, tempus bibendum felis. Fusce non leo quis diam condimentum consectetur in nec magna. Nullam dapibus metus a sapien venenatis tincidunt.
+        <div class="d-flex flex-row p-4 text-white display-6">
+            Quisque dolor nulla, consequat vel felis sit amet, tempus bibendum felis. Fusce non leo quis diam condimentum consectetur in nec magna.
         </div>
     </div>
 </div>
