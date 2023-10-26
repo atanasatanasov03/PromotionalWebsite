@@ -2,11 +2,12 @@
 
 namespace RooftopRepairs.Controllers
 {
-    public class Contacts : Controller
+    public class ServicesController : Controller
     {
         public IActionResult Index()
         {
-            return View();
+            string m = new("Вид ремонт");
+            return View(model: m);
         }
     }
 }

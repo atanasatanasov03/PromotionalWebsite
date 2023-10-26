@@ -144,7 +144,7 @@ h5 {
 .gallery-container {
     position: sticky;
     width: min(1344px, 70vw);
-    height: 40rem;
+    height: 35rem;
     background-color: rgba(54,80,161, 0.93);
     margin-top: 3vh;
 }
@@ -159,17 +159,34 @@ h5 {
     height: 25rem;
 }
 
-.img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-    max-height: auto;
-    object-fit: cover
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover !important;
+    object-position: top;
 }
 
-#carImage {
+.carousel-item {
+    width: 100%;
+    height: 100%;
+}
 
+#carouselP {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: rgba(54,80,161, 0.93);
+    font-size: 1.5rem;
+}
+
+.carousel-caption {
+    font-size: 1.8rem;
+}
+
+#radioBtn {
+    width: 5%;
+}
+
+#radioContainer {
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .spaced {
@@ -190,6 +207,20 @@ h5 {
 
 .my-row {
     height: 7rem;
+    background-color: transparent;
+}
+
+table tr td, table tr th {
+    background-color: rgba(255,255,255, 0.3) !important;
+    font-size: large;
+}
+
+.dropdown-item {
+    cursor: pointer;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: rgba(54,80,161, 0.93) !important;
 }
 
 .home-link {

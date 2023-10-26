@@ -2,7 +2,7 @@
 
 namespace RooftopRepairs.Controllers
 {
-    public class Gallery : Controller
+    public class ContactsController : Controller
     {
         public IActionResult Index()
         {

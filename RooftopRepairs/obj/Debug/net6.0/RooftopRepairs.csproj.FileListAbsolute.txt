@@ -52,3 +52,4 @@ C:\Users\naska\source\repos\RooftopRepairs\RooftopRepairs\bin\Debug\net6.0\Micro
 C:\Users\naska\source\repos\RooftopRepairs\RooftopRepairs\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\naska\source\repos\RooftopRepairs\RooftopRepairs\bin\Debug\net6.0\System.Linq.Async.dll
 C:\Users\naska\source\repos\RooftopRepairs\RooftopRepairs\obj\Debug\net6.0\RooftopRepairs.csproj.CopyComplete
+C:\Users\naska\source\repos\RooftopRepairs\RooftopRepairs\bin\Debug\net6.0\teslarooftoprepair-firebase.json

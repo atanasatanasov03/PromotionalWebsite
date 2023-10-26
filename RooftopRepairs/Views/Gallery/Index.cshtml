@@ -1,32 +1,31 @@
-﻿@{
+﻿@model List<ImageModel>
+@{
     ViewData["Title"] = "Gallery Page";
 }
+<style>
+    body { overflow-y:hidden; }
+</style>
 
 <div class="capsule" id="gallery">
     <div class="gallery-container d-flex-column p-5">
-        <div class="carousel-container li-blu d-flex flex-row p-4" style="font-size: 5rem">
-            <div id="imagesCarousel" class="carousel slide w-100" data-ride="carousel" style="overflow: hidden;">
-                <div class="carousel-inner">
-                    <div class="carousel-item active" style="position: relative">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/teslarooftoprepair.appspot.com/o/CarImage%2Fviber_image_2023-10-11_11-10-51-458.jpg?alt=media&token=0c815066-d547-403a-a5d9-a515b0d3bcfd"
-                             class="img image-responsive" />
+        <div class="carousel-container li-blu d-flex flex-row p-4" style="font-size: 5rem;">
+            <div id="imagesCarousel" class="carousel slide carousel-fade w-100 h-100" data-ride="carousel" style="overflow: hidden;">
+                <div class="carousel-inner w-100 h-100">
+                    <div class="carousel-item w-100 h-100 active" style="position: relative">
+                        <img class="w-100 h-100 rounded image-responsive" src="@Model.ElementAt(0).getUrl()" />
+                        <div class="carousel-caption pb-1">
+                            <p id="carouselP" class="shadow rounded-bottom border-bottom border-light">@Model.ElementAt(0).getDesc()</p>
+                        </div>
                     </div>
-                    <div class="carousel-item" style="position: relative">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/teslarooftoprepair.appspot.com/o/CarImage%2Fviber_image_2023-10-11_11-10-51-704.jpg?alt=media&token=fc7ab500-7680-40dd-b0fa-b4012dbc209c"
-                             class="img image-responsive" />
-                    </div>
-                    <div class="carousel-item" style="position: relative">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/teslarooftoprepair.appspot.com/o/CarImage%2Fviber_image_2023-10-11_11-11-32-660.jpg?alt=media&token=5636ba79-6104-4418-a013-d032b887f582"
-                             class="img image-responsive" />
-                    </div>
-                    <div class="carousel-item" style="position: relative">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/teslarooftoprepair.appspot.com/o/CarImage%2Fviber_image_2023-10-11_11-11-29-789.jpg?alt=media&token=2ce8cf05-c0b5-48e6-b255-6e2a5d3ed9c6"
-                             class="img image-responsive" />
-                    </div>
-                    <div class="carousel-item" style="position: relative">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/teslarooftoprepair.appspot.com/o/CarImage%2Fviber_image_2023-10-11_11-11-31-550.jpg?alt=media&token=e8c022c1-2839-43d8-8c41-56ae105ee46a"
-                             class="img image-responsive" />
-                    </div>
+                    @for (int i = 1; i < Model.Count(); i++)
+                    {
+                        <div class="carousel-item w-100 h-100" style="position: relative">
+                            <img class="w-100 h-100 rounded image-responsive" src="@Model.ElementAt(i).getUrl()" alt="rooftopImage" />
+                            <div class="carousel-caption pb-1">
+                                <p id="carouselP" class="shadow rounded-bottom border-bottom border-light">@Model.ElementAt(i).getDesc()</p>
+                            </div>
+                        </div>
+                    }
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#imagesCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -38,8 +37,27 @@
                 </button>
             </div>
         </div>
-        <div class="d-flex flex-row p-4 text-white display-6">
-            Quisque dolor nulla, consequat vel felis sit amet, tempus bibendum felis. Fusce non leo quis diam condimentum consectetur in nec magna.
+        <div class="d-flex flex-row p-4 justify-content-center display-6">
+            <div >
+                <div class="btn-group" role="group" id="radioContainer" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" onclick="redirect('Roofs')" name="btnradio" id="Roofs" autocomplete="off">
+                    <label class="btn btn-outline-primary" id="radioBtn" for="Roofs">Ремонт на покриви</label>
+
+                    <input type="radio" class="btn-check" onclick="redirect('Waterproofing')" name="btnradio" id="Waterproofing" autocomplete="off">
+                    <label class="btn btn-outline-primary" id="radioBtn" for="Waterproofing">Хидроизолация</label>
+
+                    <input type="radio" class="btn-check" onclick="redirect('Building')" name="btnradio" id="Building" autocomplete="off">
+                    <label class="btn btn-outline-primary" id="radioBtn" for="Building">Изграждане</label>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+<script>
+    function redirect(target) {
+        var url = '@Url.Action("__target__", "Gallery")';
+        window.location.href = url.replace("__target__", target);
+    }
+
+</script>

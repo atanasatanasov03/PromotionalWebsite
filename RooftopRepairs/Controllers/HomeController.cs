@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RooftopRepairs.Firestore;
 using RooftopRepairs.Models;
 using System.Diagnostics;
 
@@ -6,11 +7,11 @@ namespace RooftopRepairs.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IFireService _fs;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IFireService fs)
         {
-            _logger = logger;
+            _fs = fs;
         }
 
         public IActionResult Index()

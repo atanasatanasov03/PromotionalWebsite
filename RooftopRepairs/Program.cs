@@ -1,9 +1,11 @@
-using FirebaseAdmin;
+using RooftopRepairs.Firestore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IFireService, FireService>();
 
 var app = builder.Build();
 

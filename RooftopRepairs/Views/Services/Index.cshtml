@@ -1,4 +1,5 @@
-﻿@{
+﻿@model string
+@{
     ViewData["Title"] = "Services Page";
 }
 
@@ -6,10 +7,10 @@
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title px-2" id="exampleModalLongTitle">Заглавие на услугата</h3>
-                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="border:none; background-color:transparent;">
-                    <i class="fa-sharp fa-solid fa-x fa-lg" style="color: #3650a1; vertical-align:sub"></i>
+            <div class="modal-header d-flex align-items-center">
+                <h3 class="modal-title ms-3 mt-0 px-2" id="serviceName"></h3>
+                <button type="button" class="close me-3" data-bs-dismiss="modal" aria-label="Close" style="border:none; background-color:transparent;">
+                    <i class="fa-sharp fa-solid fa-x fa-xl" style="color: #3650a1; vertical-align:sub"></i>
                 </button>
             </div>
             <div class="modal-body">
@@ -33,39 +34,38 @@
     </div>
 </div>
 
+
 <div class="capsule">
-    <!--Services Table-->
     <div class="d-flex services-container py-5 px-4 align-items-center justify-content-around">
         <div class="table-container li-blu">
             <table class="m-auto table table-striped table-hover">
+                <!--Services Table-->
                 <tbody>
                     <tr class="my-row w-100">
-                        <th class="align-middle text-white w-25" scope="row">Хидроизолация на покриви</th>
+                        <th class="align-middle text-white text-end w-25" scope="row">Ремонт на покриви</th>
                         <td class="align-middle text-white w-50">
-                            <div class="d-flex justify-content-between">
-                                <div class="flex-col w-75">
-                                    <ul>
-                                        <li>Газопламачно залепване на един Пласт Хидроизолация със Посипка 4мм на м² SALABO Полиестер</li>
-                                        <li>Сваляне на филц от покрива и извозване до сметището</li>
-                                        <li>Преместване на филц от една страна на друга</li>
-                                    </ul>
-                                </div>
-                                <div class="flex-col w-25">
-                                    <ul class="spaced">
-                                        <li>5,50 лв/м<span class="sup">2</span></li>
-                                        <li>17,80 лв/м</li>
-                                        <li>3,30 лв/м2</li>
+                            <div class="d-flex justify-content-center">
+                                <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButtonRoofs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <li><input type="hidden" value="С керемиди" /><a class="dropdown-item">С керемиди</a></li>
+                                        <li><input type="hidden" value="С битомни керемиди" /><a class="dropdown-item">С битомни керемиди</a></li>
+                                        <li><input type="hidden" value="С пренареждане на керемиди" /><a class="dropdown-item">Пренареждане на керемиди</a></li>
+                                        <li><input type="hidden" value="Смяна на стари керемиди с нови" /><a class="dropdown-item">Смяна на стари керемиди с нови</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </td>
                         <td class="align-middle text-white w-25">
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLong">
+                            <button id="roofModalBtn" type="button" class="btn btn-primary disabled" data-bs-toggle="modal" data-bs-target="#exampleModalLong">
                                 Повече детайли
                             </button>
                         </td>
                     </tr>
+
                     <tr class="my-row w-100">
                         <th class="align-middle text-white w-25" scope="row">Ремонт на покриви</th>
                         <td class="align-middle text-white w-50">
@@ -142,3 +142,18 @@
         </div>
     </div>
 </div>
+
+<script>
+    window.onload = function () {
+        document.getElementById('dropdownMenuButtonRoofs').innerHTML = "Вид ремонт";
+    };
+
+    $(document).ready(function () {
+        $(".dropdown-menu li a").click(function () {
+            val = $(this).parent().find('input').val();
+            document.getElementById('dropdownMenuButtonRoofs').innerHTML = val;
+            document.getElementById('serviceName').innerHTML = val;
+            document.getElementById("roofModalBtn").classList.remove('disabled');
+        });
+    });
+</script>

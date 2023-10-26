@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "teslarooftoprepair",
+  "private_key_id": "82e734366c87f76328be2956e371da66ab7f2b12",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZNQMpu4aTk+lp\nq+/CWHy9/LYvRvjFI+FrKl5zflOJdf66GG0heP3H6qtH8Ee+bIYHUPpsmakRGA46\n2Cuf1wBxtYibtaAEVc4VuraIHRDm4zh5fidnx//4TkWpy1Is3j7nXq6OUBzt5BWZ\nh3YT2cOUU9c2/10QxRglwNb0yBkFi8Hyryqp8jGeY2E+OvyzAlcJdpw/SghLwCCE\n9lJtftK63DJ9v0CIiSBmSNmvT1WbKbTBfZOocr0Vm0a0FFgevTaKVrNoF/FG46xB\nyn0g15v/2xq9/wpxE6fiSQHza05E5ZM33pqntI8NKONlG8cESR3k0GRIWVxh6GmP\n/QMbukIZAgMBAAECggEABLWmjOgZAegqHnVw7GjYw5HQLXQ/fp7Ji3ZOt/hcPVXG\noShYbWpfLk+DSTsHgzR9L3ltBJ/MT6eS32nCgGO8Cbsi7CVjA9UMc+IphQgETs1M\ncy3uEsz+Wtbvob/b10c2W/Psmv9XsTzJzxtlzwZgvD2ZJAMjdHKhlGf7ATG5gSo9\nXyh52Z/hJ1Jbw706oMQsh/c+NKdkuRNaYe0CHGovrnuYeO+szuvXMQOs57YdU/q3\nxzoLf6SwErL+a4oka/v1xcwjLLfrm/W9GkXeFwKMqOVtteYhLCZnhX4w/FLwJK2I\nvswnofkpztgy/QZjQLihgw6r5JvmyMa/tCXaIPWUkQKBgQDvn1DgjsRPZGDGQdXq\ntSn5B8Hj8JT2fwKslMJ1V9qEGYdJwyWxVwId6CLbME8Ac2avtkRgvZkjb2+zCa7n\nOLvenVhnrMC9U3xWmiR8qU7tBOhCIAd2TdPiaIfEIySKJLV5cdxxUdw9O6mLnyO8\nolQ3J3xWTqagN8Dp4QbzfWy5zQKBgQDoDX7lYashmtdaSvGGX1g5OtsP4ZsPMW7S\npkTKoe3K/yR0nQcjtrmc6V1Q7/RvcOV5EtJhRfmJ5+oovNnT9fhhKEfN1F1zBsw1\nw/ApBhnyo2ChnF/gHNb7AAWdM+pxUt6YLrJGf1E+LhiBKyXuFCaVAWTRZJEnxm7A\n6whjEGStfQKBgFj/bhWJUQY/vOXFzALZeJZiuDPFxj3rHH4m3jahA6rupF3UGirM\nqx+aeV+5iI4dTnVSmADqSndryyvPG+QLIVPkUtJmyktHN7YemBCo/YRwvybYKI1b\nCKhdtJc3ijm4uqI5lOuNwOQJRcZyu94y2F6Hztlrat2093SmPGOxIPG9AoGBAJYf\nVP7Uhr/Ayp1RaptBx3OOzfWiQIw9sLJ6enqU85+mHFGM3PeP2NjYaFRaSEpoQSxo\nrs3bVSqQbH5aXpmvwTYptvpD7wjhVu9ZiV8g4VyFsZgb8DKuta3AP+GJmpwhvnu5\nif/tkgOmEphN78XsJ2GyeySz6OxQhYotA0oDav6JAoGAbJdqmpLZWKQaCcYEimvz\nXRCbBuzj+NVo7iLYoBpD6by3xoe++vOsufJYikvumNf9SHw22FMnSNVs8DV2ZT+/\nllWULEKUzkszEyiVha7EF6XgLsviLEs1f1EuaEbzLcnYyjivzio4uG9+/M2/OrFk\nYmryyuORKWIh5tTD9YW3QMM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-kn6yw@teslarooftoprepair.iam.gserviceaccount.com",
+  "client_id": "114805821439433612777",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-kn6yw%40teslarooftoprepair.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
