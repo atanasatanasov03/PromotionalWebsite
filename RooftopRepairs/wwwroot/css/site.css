@@ -116,7 +116,7 @@ h5 {
 }
 
 .capsule {
-    margin-top: 5rem;
+    margin-top: 5rem !important;
 }
 
 .home-container {
@@ -130,14 +130,14 @@ h5 {
 .services-container {
     position: sticky;
     width: min(1344px, 70vw);
-    height: 60rem;
+    height: 30rem;
     background-color: rgba(54,80,161, 0.93);
     margin-top: 3vh;
 }
 
 .table-container {
     width: min(1280px, 60w);
-    height: 55rem;
+    height: 25rem;
     padding: 3% 3% 3% 3%; 
 }
 

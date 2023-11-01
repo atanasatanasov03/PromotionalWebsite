@@ -56,7 +56,7 @@ namespace RooftopRepairs.Firestore
                 } else throw new ArgumentNullException("Document snapshot is null");
             }
 
-            return imgList;
+            return imgList.OrderBy(x => Random.Shared.Next()).ToList();
         }
 
         public List<ImageModel>? getRoofImgs()
