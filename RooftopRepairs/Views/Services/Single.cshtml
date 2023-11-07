@@ -1,5 +1,107 @@
-﻿@model string
+﻿@model ServiceModel
 @{
 }
 
-@Model
+<style>
+    body {
+        overflow-y: hidden;
+    }
+</style>
+
+<div class="capsule">
+    <div class="services-container d-flex-column p-5">
+        <div class="carousel-container container-fluid li-blu text-white d-flex flex-row p-4 h-100" style="overflow-y:hidden">
+            <div class="row h-100 w-100">
+                <div class="col col-sm-3 d-flex justify-content-start ps-4 pe-3 w-75 h-25">
+                    <div class="m-3 mt-0 fs-1 d-flex justify-content-center align-items-center">
+                        @Model.serviceName
+                    </div>
+                </div>
+                <div class="col col-sm-3 d-flex justify-content-start align-items-center w-25 h-25">
+                    <div class="text-start fs-4 my-auto ps-0 me-2">
+                        @if(Model.servicePrice == "По договаряне")
+                        {
+                            <span>Цена: @Model.servicePrice</span>
+                        } else
+                        {
+                            <span>Цена: @Model.servicePrice лв/м&sup2;</span>
+                        }
+                        
+                    </div>
+                </div>
+                <div class="w-100"></div>
+                <div class="col col-sm-3 d-flex justify-content-center px-4 w-50 h-75">
+                    <table class="table" id="detailsTable">
+                        <thead>
+                            <tr>
+                                <th class="p-0" scope="col">Дейности</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (string line in Model.serviceDesc)
+                            {
+                               <tr>
+                                    <td class="text-center align-middle">@line</td>
+                               </tr> 
+                            }
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col col-sm-3 justify-content-start px-4 w-50 h-75">
+                    <form id="contact-form" name="contact-form">
+                        <div class="row mt-2">
+                            <div class="fs-3 text-center">Отправете запитване</div>
+                        </div>
+
+                        <!--Grid row-->
+                        <div class="row mt-4">
+
+                            <!--Grid column-->
+                            <div class="col-md-6">
+                                <div class="md-form mb-1">
+                                    <input type="text" id="name" name="name" class="form-control">
+                                    <label for="name" class="">Име</label>
+                                </div>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-md-6">
+                                <div class="md-form mb-1">
+                                    <input type="text" id="email" name="email" class="form-control">
+                                    <label for="email" class="">Имейл адрес</label>
+                                </div>
+                            </div>
+                            <!--Grid column-->
+
+                        </div>
+                        <!--Grid row-->
+                        <!--Grid row-->
+                        <div class="row mt-2">
+
+                            <!--Grid column-->
+                            <div class="col-md-12">
+
+                                <div class="md-form">
+                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                    <label for="message">Съобщение</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--Grid row-->
+                    </form>
+                    <div class="text-center text-md-left mt-3">
+                        <a class="btn btn-primary" onclick="validateForm();">Изпрати</a>
+                        <div class="status"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    
+</script>

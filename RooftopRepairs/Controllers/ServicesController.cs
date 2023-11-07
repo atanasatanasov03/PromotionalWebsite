@@ -5,6 +5,7 @@ namespace RooftopRepairs.Controllers
 {
     public class ServicesController : Controller
     {
+        private static readonly Dictionary<string, List<ServiceModel>> _model = new Dictionary<string, List<ServiceModel>>();
         public IActionResult Index()
         {
             List<ServiceModel> roofServices = new List<ServiceModel>() {
@@ -35,19 +36,30 @@ namespace RooftopRepairs.Controllers
                 new ServiceModel("Изграждане на беседка или навес", new List<string> { "Топлоизолация по желание" }, "По договаряне")
             };
 
-            Dictionary<string, List<ServiceModel>> model = new Dictionary<string, List<ServiceModel>>();
-            model["Ремон на покриви и хидроизолация"] = roofServices;
-            model["Тенекеджийство"] = tinsmithingServices;
-            model["Изграждане на покриви"] = buildingRoofs;
-            model["Изграждане на комини"] = buildingChimneys;
-            model["Беседки и навеси"] = buildingGazebo;
+            _model["Ремон на покриви и хидроизолация"] = roofServices;
+            _model["Тенекеджийство"] = tinsmithingServices;
+            _model["Изграждане на покриви"] = buildingRoofs;
+            _model["Изграждане на комини"] = buildingChimneys;
+            _model["Беседки и навеси"] = buildingGazebo;
             
-            return View(model);
+            return View(_model);
         }
         
-        public IActionResult Single(string id)
+        public IActionResult Single(string id, string key)
         {
-            return View(id);
+            ServiceModel model = null;
+            foreach(ServiceModel service in _model[key])
+            {
+                if (service.id == id)
+                {
+                    model = service;
+                    break;
+                }
+            }
+
+            if(model is not null)
+                return View(model);
+            else return Index();
         }
     }
 }
