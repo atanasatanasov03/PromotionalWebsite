@@ -1,6 +1,8 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model List<ImageModel>
+@{
+    ViewData["Title"] = "Добре Дошли";
 }
+
 
 <div class="capsule">
     <!--About us-->
@@ -18,7 +20,7 @@
             </div>
             <div class="d-flex per-col2 px-2">
                 <div style="height: 100%; width: 100%; overflow: hidden">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/teslarooftoprepair.appspot.com/o/viber_image_2023-10-11_11-10-51-354.jpg?alt=media&token=c7f0239f-6b94-4dc5-9c65-f0d1383009fe"
+                    <img src="@Model[0].getUrl()" />
                     class="image-responsive" style="max-height: 100%; max-width: auto; object-fit:cover" />
                 </div>
             </div>
@@ -27,7 +29,7 @@
     <div class="d-flex home-container py-5 px-4 align-items-center justify-content-around">
             <div class="d-flex per-col2 px-2">
                 <div class="d-flex justify-content-center align-items-center" style="height: 100%; width: 100%; overflow: hidden">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/teslarooftoprepair.appspot.com/o/viber_image_2023-10-11_11-10-51-039.jpg?alt=media&token=8fd65ef4-a943-4914-a15c-bbe500936c72"
+                <img src="@Model[1].getUrl()"
                     class="image-responsive" style="max-height: 100%; max-width: auto; object-fit:cover" />
                 </div>
             </div>
@@ -56,7 +58,7 @@
             </div>
             <div class="d-flex per-col2 px-2">
                 <div style="height: 100%; width: 100%; overflow: hidden">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/teslarooftoprepair.appspot.com/o/viber_image_2023-10-11_11-26-18-874.jpg?alt=media&token=b61a4c43-1754-41ee-b076-bdddab9c2537"
+                <img src="@Model[2].getUrl()"
                     class="image-responsive" style="max-width: 100%; max-height: auto; object-fit:cover" />
                 </div>
             </div>
@@ -65,7 +67,7 @@
     <div class="d-flex home-container py-5 px-4 align-items-center justify-content-around">
             <div class="d-flex per-col2 px-2">
                 <div style="height: 100%; width: 100%; overflow: hidden">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/teslarooftoprepair.appspot.com/o/viber_image_2023-10-11_11-11-29-419.jpg?alt=media&token=d45908ac-6b2b-46bc-bb6e-212e27806522"
+                <img src="@Model[3].getUrl()"
                     class="image-responsive" style="max-height: 100%; max-width: auto; object-fit:cover" />
                 </div>
             </div>

@@ -1,5 +1,6 @@
 ﻿using Google.Cloud.Firestore;
 using RooftopRepairs.Models;
+using System.Linq.Expressions;
 
 namespace RooftopRepairs.Firestore
 {
@@ -10,6 +11,9 @@ namespace RooftopRepairs.Firestore
         private static List<ImageModel>? roofs;
         private static List<ImageModel>? waterproofing;
         private static List<ImageModel>? building;
+        private static List<ImageModel>? home;
+        private static List<ImageModel>? aboutUs;
+        private static bool loaded;
         public static FireService instance
         {
             get { return _instance; }
@@ -24,14 +28,18 @@ namespace RooftopRepairs.Firestore
             roofs = new List<ImageModel>();
             waterproofing = new List<ImageModel>();
             building = new List<ImageModel>();
+            home = new List<ImageModel>();
+            aboutUs = new List<ImageModel>();
 
             instance.Fire();
         }
-        public async void Fire()
+        public async Task Fire()
         {
+            home = await getImagesFrom("Home");
             roofs = await getImagesFrom("Roofs");
             waterproofing = await getImagesFrom("Waterproofing");
             building = await getImagesFrom("Building");
+            loaded = true;
         }
 
         public async Task<List<ImageModel>> getImagesFrom(string collection)
@@ -55,8 +63,9 @@ namespace RooftopRepairs.Firestore
                     imgList.Add(img);
                 } else throw new ArgumentNullException("Document snapshot is null");
             }
-
-            return imgList.OrderBy(x => Random.Shared.Next()).ToList();
+            if (collection != "Home" && collection != "AboutUs")
+                return imgList.OrderBy(x => Random.Shared.Next()).ToList();
+            else return imgList;
         }
 
         public List<ImageModel>? getRoofImgs()
@@ -71,6 +80,16 @@ namespace RooftopRepairs.Firestore
         {
             return building;
         }
+        public List<ImageModel>? getHomeImgs()
+        {
+            return home;
+        }
+        public List<ImageModel>? getAboutUsImgs()
+        {
+            return aboutUs;
+        }
+
+        public bool Loaded() { return loaded; }
 
         public bool isNull()
         {
