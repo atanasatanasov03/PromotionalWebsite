@@ -5,17 +5,19 @@ namespace RooftopRepairs.Models
     public class ServiceModel
     {
         private static Random random = new Random();
+        public string id { get; set; }
         public string serviceName { get; set; }
         public List<string> serviceDesc { get; set; }
         public string servicePrice { get; set; }
-        public string id { get; set; }
-
-        public ServiceModel(string serviceName, List<string> serviceDesc, string servicePrice)
+        public string key { get; set; }
+        public ServiceModel() { }
+        public ServiceModel(string serviceName, List<string> serviceDesc, string servicePrice, string key)
         {
+            id = RandomString(7);
             this.serviceName = serviceName;
             this.serviceDesc = serviceDesc;
             this.servicePrice = servicePrice;
-            id = RandomString(7);
+            this.key = key;
         }
 
         private static string RandomString(int length)

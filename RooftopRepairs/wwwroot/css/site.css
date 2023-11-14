@@ -20,7 +20,7 @@ footer {
     font-size: min(1.5vw, 17px);
     height: min(60px);
 }
-    
+
 footer .container {
     margin: 0px min(20px, 20vh) 0px min(20px, 20vh);
     text-align: left;
@@ -149,13 +149,13 @@ h5 {
 .accordion-container {
     width: min(1280px, 60w);
     height: 30rem;
-    padding: 3% 3% 3% 3%; 
+    padding: 3% 3% 3% 3%;
     font-size: max(16px, 1.15rem);
     overflow-y: auto;
 }
 
 accordion-header {
-    font-size: max(16px, 1.15rem); !important
+    font-size: max(16px, 1.15rem) !important;
 }
 
 .gallery-container {
@@ -267,7 +267,7 @@ table tr td, table tr th {
 
 .gallery-buttons {
     font-size:28px;
-    
+
 
 }
 
@@ -279,17 +279,17 @@ table tr td, table tr th {
 }
 /*
 @media screen and (max-width: 1700px) {
-    
-    
+
+
 }
 
 @media screen and (max-width: 1500px) {
-    
-    
+
+
 }
 
 @media screen and (max-width: 1350px) {
-    
+
 }
 */
 @media only screen and (max-width: 12000px) {
@@ -323,7 +323,7 @@ table tr td, table tr th {
         margin: 0px 0px !important;
         height: auto;
         width: 100% !important;
-        
+
     }
     .container + .container {
         margin-top: 30px;
@@ -349,7 +349,7 @@ table tr td, table tr th {
     .gallery-buttons {
         font-size: 18px;
         color: green !important;
-        
+
     }
 
 }
@@ -368,7 +368,7 @@ table tr td, table tr th {
     body {
         padding-top: 49px !important;
     }
-    
+
 }
 
 @media screen and (max-width: 575px) {
@@ -385,3 +385,4 @@ table tr td, table tr th {
         font-size: max(1vw, 9px);
     }
 }
+

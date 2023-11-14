@@ -1,7 +1,6 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model InquiryModel
 @{
+    ViewData["Title"] = "Контакти";
 }
 <style>
     .list-unstyled {
@@ -31,13 +30,13 @@
             <section class="col">
 
                 <!--Section heading-->
-                <h2 class="h1-responsive font-weight-bold text-center mb-4">Отправете запитване</h2>
+                <h2 class="h1-responsive font-weight-bold text-center mb-4 me-3">Отправете запитване</h2>
 
                 <div class="row w-100">
 
                     <!--Grid column-->
                     <div class="col-md-9 mb-md-0 mb-5 w-100">
-                        <form id="contact-form" name="contact-form">
+                        <form id="contact-form" name="contact-form" enctype="multipart/form-data" method="post" novalidate>
 
                             <div class="container">
                                 <div class="row">
@@ -62,14 +61,14 @@
                                 </div>
                             </div>
                             <!--Grid row-->
-                            
+
                             <!--Grid row-->
                             <!--Grid row-->
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="md-form mb-1">
-                                        <input type="text" id="subject" name="subject" class="form-control">
-                                        <label for="subject" class="">Тема</label>
+                                        <input asp-for="subject" type="text" id="subject" name="subject" class="form-control" autocomplete="off">
+                                        <label asp-for="subject">Тема</label>
                                     </div>
                                 </div>
                             </div>
@@ -81,20 +80,20 @@
                                 <div class="col-md-12">
 
                                     <div class="md-form mt-1">
-                                        <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                                        <label for="message">Съобщение</label>
+                                        <textarea asp-for="message" type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                        <label asp-for="message">Съобщение</label>
                                     </div>
 
                                 </div>
                             </div>
                             <!--Grid row-->
 
-                        </form>
+                            <div class="text-center text-md-left mt-3">
+                                <button class="btn btn-primary"type="submit">Изпрати</button>
+                            </div>
 
-                        <div class="text-center text-md-left mt-3">
-                            <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Изпрати</a>
-                        </div>
-                        <div class="status"></div>
+
+                        </form>
 
                         <!--Grid row-->
                         <div class="row">
@@ -112,12 +111,12 @@
 
                                 <li>
                                     <i class="fas fa-phone my-2 fa-2x"></i>
-                                    <p>+ 01 234 567 89</p>
+                                    <p>+359 883 686 966</p>
                                 </li>
 
                                 <li>
                                     <i class="fas fa-envelope my-2 fa-2x"></i>
-                                    <p>contact@mdbootstrap.com</p>
+                                    <p>tesla.rooftop.repair@gmail.com</p>
                                 </li>
                             </ul>
                         </div>
@@ -130,9 +129,24 @@
 
             </section>
             <!--Section: Contact v.2-->
-            <section class="col">
+            <section class="w-50">
+                @* <gmp-map id="map" center="42.65131378173828,23.335939407348633" zoom="14" map-id="494997b2e6d8cb43">
+                    <gmp-advanced-marker position="42.65131378173828,23.335939407348633" title="Tesla EOOD">
+                    </gmp-advanced-marker> *@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2934.4738121485034!2d23.335939399999997!3d42.6513138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDM5JzA0LjciTiAyM8KwMjAnMDkuNCJF!5e0!3m2!1sbg!2snl!4v1699811637325!5m2!1sbg!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </gmp-map>
+                <div class="d-flex justify-content-center px-4 pt-2 w-100">
+                    <p class="fs-5">гр.София, бул. Симеоновско шосе  51</p>
+                </div>
             </section>
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function {
+        new google.maps.Map(document.getElementById("map"), {
+            mapId: "494997b2e6d8cb43",
+    }
+    );
+</script>
