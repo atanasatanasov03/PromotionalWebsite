@@ -1,5 +1,6 @@
-﻿@model ServiceModel
+﻿@model SingleServiceModel
 @{
+    ViewData["Title"] = Model.service.serviceName;
 }
 
 <style>
@@ -14,17 +15,17 @@
             <div class="row h-100 w-100">
                 <div class="col col-sm-3 d-flex justify-content-start ps-4 pe-3 w-75 h-25">
                     <div class="m-3 mt-0 fs-1 d-flex justify-content-center align-items-center">
-                        @Model.serviceName
+                        @Model.service.serviceName
                     </div>
                 </div>
                 <div class="col col-sm-3 d-flex justify-content-start align-items-center w-25 h-25">
                     <div class="text-start fs-4 my-auto ps-0 me-2">
-                        @if(Model.servicePrice == "По договаряне")
+                        @if(Model.service.servicePrice == "По договаряне")
                         {
-                            <span>Цена: @Model.servicePrice</span>
+                            <span>Цена: @Model.service.servicePrice</span>
                         } else
                         {
-                            <span>Цена: @Model.servicePrice лв/м&sup2;</span>
+                            <span>Цена: @Model.service.servicePrice лв/м&sup2;</span>
                         }
                         
                     </div>
@@ -38,7 +39,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach (string line in Model.serviceDesc)
+                            @foreach (string line in Model.service.serviceDesc)
                             {
                                <tr>
                                     <td class="text-center align-middle">@line</td>
@@ -49,7 +50,7 @@
                     </table>
                 </div>
                 <div class="col col-sm-3 justify-content-start px-4 w-50 h-75">
-                    <form id="contact-form" name="contact-form">
+                    <form asp-action="Inquire" method="post" id="contact-form" name="contact-form" enctype="multipart/form-data" novalidate>
                         <div class="row mt-2">
                             <div class="fs-3 text-center">Отправете запитване</div>
                         </div>
@@ -60,8 +61,8 @@
                             <!--Grid column-->
                             <div class="col-md-6">
                                 <div class="md-form mb-1">
-                                    <input type="text" id="name" name="name" class="form-control">
-                                    <label for="name" class="">Име</label>
+                                    <input asp-for="inquiry.name" type="text" id="name" name="inquiry.name" class="form-control" autocomplete="off" />
+                                    <label asp-for="inquiry.name" class="">Име и фамилия</label>
                                 </div>
                             </div>
                             <!--Grid column-->
@@ -69,8 +70,8 @@
                             <!--Grid column-->
                             <div class="col-md-6">
                                 <div class="md-form mb-1">
-                                    <input type="text" id="email" name="email" class="form-control">
-                                    <label for="email" class="">Имейл адрес</label>
+                                    <input asp-for="inquiry.email" type="text" id="email" name="inquiry.email" class="form-control" autocomplete="off" />
+                                    <label asp-for="inquiry.email" class="">Имейл адрес</label>
                                 </div>
                             </div>
                             <!--Grid column-->
@@ -84,24 +85,25 @@
                             <div class="col-md-12">
 
                                 <div class="md-form">
-                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                                    <label for="message">Съобщение</label>
+                                    <textarea asp-for="inquiry.message" type="text" id="message" name="inquiry.message" rows="2" class="form-control md-textarea"></textarea>
+                                    <label asp-for="inquiry.message">Съобщение</label>
+                                    <input hidden asp-for="inquiry.subject" />
+                                    <input hidden asp-for="service.id" value="@Model.service.id" />
+                                    <input hidden asp-for="service.serviceName" value="@Model.service.serviceName" />
+                                    <input hidden asp-for="service.servicePrice" value="@Model.service.servicePrice" />
+                                    <input hidden asp-for="service.serviceDesc" value="@Model.service.serviceDesc" />
+                                    <input hidden asp-for="service.key" value="@Model.service.key" />
                                 </div>
 
                             </div>
                         </div>
                         <!--Grid row-->
+                        <div class="text-center text-md-left mt-3">
+                            <button class="btn btn-primary" type="submit">Изпрати</button>
+                        </div>
                     </form>
-                    <div class="text-center text-md-left mt-3">
-                        <a class="btn btn-primary" onclick="validateForm();">Изпрати</a>
-                        <div class="status"></div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<script>
-    
-</script>

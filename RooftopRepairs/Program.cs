@@ -1,11 +1,29 @@
+using Microsoft.Extensions.Configuration;
 using RooftopRepairs.Firestore;
+using Microsoft.Extensions.Configuration;
+using RooftopRepairs.Helpers;
+using NToastNotify;
+using RooftopRepairs.Models;
+using RooftopRepairs.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddNToastNotifyToastr(new NToastNotify.ToastrOptions()
+{
+    ProgressBar = true,
+    TimeOut = 5000,
+    PositionClass = ToastPositions.BottomRight
+
+}) ;
 
 builder.Services.AddScoped<IFireService, FireService>();
+
+builder.Services.AddScoped<IOptionsService, OptionsService>();
+
+builder.Services.AddScoped<IEmailService, EmailService>();
+
+builder.Services.Configure<MailOptions>(builder.Configuration.GetSection("Mail"));
 
 var app = builder.Build();
 
@@ -23,6 +41,8 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.UseNToastNotify();  
 
 app.MapControllerRoute(
     name: "default",

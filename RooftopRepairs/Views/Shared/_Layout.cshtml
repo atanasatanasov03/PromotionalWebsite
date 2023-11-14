@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/RooftopRepairs.styles.css" asp-append-version="true" />
-    <script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&callback=console.debug&libraries=maps,marker&v=beta">
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3WiDCIyXHC6oF_P3P7MjwxRhNdb3u6_4&callback=console.debug&libraries=maps,marker&v=beta">
     </script>
     <script src="https://kit.fontawesome.com/01a57c0a85.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -24,13 +24,13 @@
         <section class="top-bar">
             <div class="row text-light px-3" style="width:100%; height:100%; ">
                 <div class="col-sm pl-5">
-                    email@tesla-eood.bg
+                    tesla.rooftop.repair@gmail.com
                 </div><div class="col-md-6 text-center">
                     <!--brand-->
                     <a class="navbar-brand text-light" asp-area="" asp-controller="Home" asp-action="Index">ТЕСЛА ЕООД</a>
                 </div>
                 <div class="col-sm pr-5 text-end">
-                    +359 88 888 8888
+                    +359 883 686 966
                 </div>
             </div>
         </section>
@@ -90,10 +90,13 @@
         </div>
     </footer>
 
-    
+
+
+    <script src="/_framework/aspnetcore-browser-refresh.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    @await Component.InvokeAsync("NToastNotify")
 </body>
 </html>

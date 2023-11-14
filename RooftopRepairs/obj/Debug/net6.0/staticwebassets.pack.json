@@ -1,6 +1,14 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\naska\\.nuget\\packages\\ntoastnotify\\8.0.0\\contentFiles\\any\\net6.0\\wwwroot\\noty.js",
+      "PackagePath": "staticwebassets\\noty.js"
+    },
+    {
+      "Id": "C:\\Users\\naska\\.nuget\\packages\\ntoastnotify\\8.0.0\\contentFiles\\any\\net6.0\\wwwroot\\toastr.js",
+      "PackagePath": "staticwebassets\\toastr.js"
+    },
+    {
       "Id": "C:\\Users\\naska\\source\\repos\\RooftopRepairs\\RooftopRepairs\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\RooftopRepairs.bundle.scp.css",
       "PackagePath": "staticwebassets\\RooftopRepairs.bundle.scp.css"
     },

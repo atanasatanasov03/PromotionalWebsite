@@ -59,7 +59,6 @@ namespace RooftopRepairs.Firestore
                         if (item.Key == "url") img.setUrl(item.Value.ToString());
                         if (item.Key == "desc") img.setDesc(item.Value.ToString());
                     }
-                    Console.WriteLine(img.getUrl());
                     imgList.Add(img);
                 } else throw new ArgumentNullException("Document snapshot is null");
             }
