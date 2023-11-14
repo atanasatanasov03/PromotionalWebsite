@@ -8,7 +8,9 @@ html {
     font-family: 'Noto', serif; /*
     font-style: normal;
     font-weight: 400;*/
+
 }
+
 
 footer {
     position: absolute;
@@ -43,6 +45,7 @@ body {
     background: url("https://images.pexels.com/photos/45206/roofing-tile-red-wall-45206.jpeg?auto=compress&cs=tinysrgb&w=4016&h=6016&dpr=1");
     background-size: cover;
     opacity: 0.6;
+    z-index: -10;
 }
 }
 
@@ -106,7 +109,9 @@ h5 {
 }
 
 .image-responsive {
-    max-width: 700px;
+    padding: 0;
+    margin: 0;
+   height: 100%;
 }
 
 .navbar {
@@ -126,16 +131,12 @@ h5 {
 }
 
 .home-container {
-    position: sticky;
-    width: min(1344px, 70vw);
     height: 30rem;
     background-color: rgba(54,80,161, 0.93);
-    margin-top: 3vh;
+
 }
 
 .services-container {
-    position: sticky;
-    width: min(1344px, 70vw);
     height: 35rem;
     background-color: rgba(54,80,161, 0.93);
     margin-top: 0;
@@ -158,10 +159,10 @@ accordion-header {
 }
 
 .gallery-container {
-    position: sticky;
-    width: min(1344px, 70vw);
+/*    width: min(1344px, 70vw);*/
     height: 35rem;
     background-color: rgba(54,80,161, 0.93);
+    margin: auto;
     margin-top: 3vh;
 }
 
@@ -197,12 +198,10 @@ img {
     font-size: 1.8rem;
 }
 
-#radioBtn {
-    width: 5%;
-}
 
 #radioContainer {
     background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
 }
 
 .spaced {
@@ -249,19 +248,35 @@ table tr td, table tr th {
 
 .per-col1 {
     height: 100%;
-    width: 40%;
 }
 
+.bullet-container {
+    background-color: rgba(146, 168, 209, 0.7);
+}
 .li-blu {
     background-color: rgba(146, 168, 209, 0.7);
 }
 
 .per-col2 {
     height: 100%;
-    width: 60%;
 }
 
+.global-wrapper {
+    width: 70%
+}
 
+.gallery-buttons {
+    font-size:28px;
+    
+
+}
+
+.mobile-visible {
+    display: none !important;
+}
+.desktop-visible {
+    display: inline !important;
+}
 /*
 @media screen and (max-width: 1700px) {
     
@@ -277,13 +292,15 @@ table tr td, table tr th {
     
 }
 */
-
 @media only screen and (max-width: 12000px) {
     body {
         font-size: 75%;
     }
-    .home-container {
-        height: min(30rem, 60vw);
+    .p-1 {
+        font-size: 20px;
+    }
+    .global-wrapper {
+        width: 80%
     }
 }
 
@@ -292,17 +309,58 @@ table tr td, table tr th {
         background-color: rgba(72, 84, 96, 1);
         max-width: 100vw;
     }
+
     .navbar-brand {
         font-size: 18px;
     }
+
     #offcanvasNavbarLabel {
         font-size: 18px;
     }
+
+    .home-container {
+        padding: 0px 0px !important;
+        margin: 0px 0px !important;
+        height: auto;
+        width: 100% !important;
+        
+    }
+    .container + .container {
+        margin-top: 30px;
+    }
+
+    .image-responsive {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+
+
 }
 
 @media screen and (max-width: 840px) {
     .top-bar {
         font-size: max(1vw, 13px);
+    }
+
+    .global-wrapper {
+        width: 90%
+    }
+    .gallery-buttons {
+        font-size: 18px;
+        color: green !important;
+        
+    }
+
+}
+
+@media screen and (max-width: 720px) {
+    .desktop-visible {
+        display: none !important;
+    }
+
+    .mobile-visible {
+        display: inline !important;
     }
 }
 
@@ -310,6 +368,7 @@ table tr td, table tr th {
     body {
         padding-top: 49px !important;
     }
+    
 }
 
 @media screen and (max-width: 575px) {

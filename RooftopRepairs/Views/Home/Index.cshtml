@@ -6,8 +6,9 @@
 
 <div class="capsule">
     <!--About us-->
-    <div class="d-flex home-container py-5 px-4 align-items-center justify-content-around">
-            <div class="d-flex per-col1 li-blu py-3 px-2">
+    <div class="container">
+        <div class="row home-container py-5 px-4 align-items-center justify-content-md-center">
+            <div class="col per-col1 li-blu py-3 px-2">
                 <div class="d-flex flex-column py-3 px-2 justify-content-center text-white" style="height: 100%; width: 100%;">
                     <h1 class="p-1">ТЕСЛА ООД</h1>
                     <h5 class="p-1">15 години опит в строителството</h5>
@@ -18,15 +19,33 @@
                     </h4>
                 </div>
             </div>
-            <div class="d-flex per-col2 px-2">
-                <div style="height: 100%; width: 100%; overflow: hidden">
-                    <img src="@Model[0].getUrl()" />
-                    class="image-responsive" style="max-height: 100%; max-width: auto; object-fit:cover" />
-                </div>
+            <div class="col-md-auto per-col2">
+                <img src="@Model[0].getUrl()" class="image-responsive" />
             </div>
+        </div>
     </div>
     <!--Services-->
-    <div class="d-flex home-container py-5 px-4 align-items-center justify-content-around">
+    <div class="container">
+        <div class="row home-container py-5 px-4 align-items-center justify-content-md-center">
+            <div class="col-md-auto per-col2">
+                <img src="@Model[1].getUrl()" class="image-responsive" />
+            </div>
+            <div class="col per-col1 li-blu py-3 px-2">
+                <div class="d-flex flex-column py-3 px-2 justify-content-center text-white" style="height: 100%; width: 100%;">
+                    <h1 class="p-1">Услуги</h1>
+                    <h5 class="p-1">Ремонт на покриви</h5>
+                    <h5 class="p-1">Хидроизолация</h5>
+                    <h5 class="p-1">Тенекеджийство</h5>
+                    <h4 class="p-1">
+                        <a class="home-link link-underline-light text-light" asp-area="" asp-controller="Services" asp-action="Index">И още други</a>
+                    </h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--<div class="d-flex home-container py-5 px-4 align-items-center justify-content-around">
             <div class="d-flex per-col2 px-2">
                 <div class="d-flex justify-content-center align-items-center" style="height: 100%; width: 100%; overflow: hidden">
                 <img src="@Model[1].getUrl()"
@@ -44,9 +63,26 @@
                     </h4>
                 </div>
             </div>
-    </div>
+    </div>-->
     <!--Gallery-->
-    <div class="d-flex home-container py-5 px-4 align-items-center justify-content-around">
+    <div class="container">
+        <div class="row home-container py-5 px-4 align-items-center justify-content-md-center">
+
+            <div class="col per-col1 li-blu py-3 px-2">
+                <div class="d-flex flex-column py-3 px-2 justify-content-center text-white" style="height: 100%; width: 100%;">
+                    <h1 class="p-1">Убедете се сами</h1>
+                    <h5 class="p-1">Не се доверявайте на сляпо</h5>
+                    <h4 class="p-1">
+                        <a class="home-link link-underline-light text-light" asp-area="" asp-controller="Gallery" asp-action="Index">Отвори Галерия</a>
+                    </h4>
+                </div>
+            </div>
+            <div class="col-md-auto per-col2">
+                <img src="@Model[2].getUrl()" class="image-responsive" />
+            </div>
+        </div>
+    </div>
+    <!--<div class="d-flex home-container py-5 px-4 align-items-center justify-content-around">
             <div class="d-flex per-col1 li-blu py-3 px-2">
                 <div class="d-flex flex-column py-3 px-2 justify-content-center text-white" style="height: 100%; width: 100%;">
                     <h1 class="p-1">Убедете се сами</h1>
@@ -62,9 +98,26 @@
                     class="image-responsive" style="max-width: 100%; max-height: auto; object-fit:cover" />
                 </div>
             </div>
-    </div>
+    </div>-->
     <!--Contacts-->
-    <div class="d-flex home-container py-5 px-4 align-items-center justify-content-around">
+    <div class="container">
+        <div class="row home-container py-5 px-4 align-items-center justify-content-md-center">
+            <div class="col-md-auto per-col2">
+                <img src="@Model[3].getUrl()" class="image-responsive" />
+            </div>
+            <div class="col per-col1 li-blu py-3 px-2">
+                <div class="d-flex flex-column py-3 px-2 justify-content-center text-white" style="height: 100%; width: 100%;">
+                    <h1 class="p-1">Свържете се с нас</h1>
+                    <h5 class="p-1">Тел.: 088 888 8888</h5>
+                    <h4 class="p-1">
+                        <a class="home-link link-underline-light text-light" asp-area="" asp-controller="Contacts" asp-action="Index">Напиши ни имейл</a>
+                    </h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--<div class="d-flex home-container py-5 px-4 align-items-center justify-content-around">
             <div class="d-flex per-col2 px-2">
                 <div style="height: 100%; width: 100%; overflow: hidden">
                 <img src="@Model[3].getUrl()"
@@ -80,5 +133,5 @@
                     </h4>
                 </div>
             </div>
-    </div>
+    </div>-->
 </div>
