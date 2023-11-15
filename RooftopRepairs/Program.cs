@@ -5,6 +5,8 @@ using RooftopRepairs.Helpers;
 using NToastNotify;
 using RooftopRepairs.Models;
 using RooftopRepairs.Services;
+using RooftopRepairs.Interfaces;
+using Webpack;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +18,8 @@ builder.Services.AddControllersWithViews().AddNToastNotifyToastr(new NToastNotif
     PositionClass = ToastPositions.BottomRight
 
 }) ;
+
+builder.Services.AddWebpack();
 
 builder.Services.AddScoped<IFireService, FireService>();
 

@@ -10,7 +10,9 @@
 </style>
 
 <div class="capsule">
+    <!--Container-->
     <div class="d-flex home-container py-5 px-4 align-items-center justify-content-around" style="height: 35rem">
+        <!--Accordion-->
         <div class="accordion-container li-blu">
             <div class="accordion accordion-flush" style="max-height: 100%" id="ServicesAccordion">
                 @foreach(string key in Model.Keys){
@@ -61,13 +63,9 @@
     </div>
 </div>
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#roofBtn").click();
-    });
+<script>
     function redirect(target) {
         var url = '@Url.Action("__target__", "Gallery")';
         window.location.href = url.replace("__target__", target);
     }
-
 </script>

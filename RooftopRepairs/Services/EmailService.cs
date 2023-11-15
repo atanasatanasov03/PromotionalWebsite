@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Options;
-using RooftopRepairs.Helpers;
+using RooftopRepairs.Interfaces;
 using RooftopRepairs.Models;
 using System.Net;
 using System.Net.Mail;
@@ -13,7 +13,7 @@ namespace RooftopRepairs.Services
         {
             _options = options;
         }
-        public void sendEmail(InquiryModel model)
+        public void sendEmail(InquiryViewModel model)
         {
             var fromAddress = new MailAddress(_options.GetOptions().Address, "TeslaRooftopRepair");
             var toAddress = new MailAddress("naskata088@gmail.com", "agne");

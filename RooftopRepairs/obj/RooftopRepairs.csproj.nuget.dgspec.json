@@ -54,7 +54,11 @@
             },
             "System.Configuration.ConfigurationManager": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[8.0.0, )"
+            },
+            "Webpack": {
+              "target": "Package",
+              "version": "[4.0.0, )"
             }
           },
           "imports": [

@@ -1,0 +1,32 @@
+{
+  "name": "rooftoprepairs",
+  "version": "1.0.0",
+  "description": "Freelance project for a rooftop repair company",
+  "scripts": {
+    "build": "webpack --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atanasatanasov03/PromotionalWebsite.git"
+  },
+  "keywords": [
+    ".net6",
+    "mvc",
+    "website",
+    "freelance",
+    "bootstrap",
+    "css",
+    "c#",
+    "javascript"
+  ],
+  "author": "Atanas Atanasov, Denis Zahariev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atanasatanasov03/PromotionalWebsite/issues"
+  },
+  "homepage": "https://github.com/atanasatanasov03/PromotionalWebsite#readme",
+  "devDependencies": {
+    "eslint": "^8.53.0",
+    "webpack": "^4.0.0"
+  }
+}

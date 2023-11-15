@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NToastNotify;
+using RooftopRepairs.Interfaces;
 using RooftopRepairs.Models;
-using RooftopRepairs.Services;
 using System.ComponentModel;
 using System.Dynamic;
 
@@ -66,7 +66,7 @@ namespace RooftopRepairs.Controllers
 
             if (single is not null)
             {
-                SingleServiceModel model = new SingleServiceModel(single, new InquiryModel(single.serviceName));
+                SingleServiceModel model = new SingleServiceModel(single, new InquiryViewModel(single.serviceName));
                 return View(model);
             }
             else

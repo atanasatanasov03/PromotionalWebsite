@@ -2,7 +2,7 @@
 
 namespace RooftopRepairs.Models
 {
-    public class InquiryModel
+    public class InquiryViewModel
     {
         [Required]
         [StringLength(120, MinimumLength = 3)]
@@ -24,18 +24,18 @@ namespace RooftopRepairs.Models
             subject = string.Empty;
             message = string.Empty;
         }
-        public InquiryModel(string name, string email, string subject, string message)
+        public InquiryViewModel(string name, string email, string subject, string message)
         {
             this.name = name;
             this.email = email;
             this.subject = subject;
             this.message = message;
         }
-        public InquiryModel(string subject)
+        public InquiryViewModel(string subject)
         {
             clear();
             this.subject = subject;
         }
-        public InquiryModel() { }
+        public InquiryViewModel() { }
     }
 }

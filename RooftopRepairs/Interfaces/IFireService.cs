@@ -1,6 +1,6 @@
 ﻿using RooftopRepairs.Models;
 
-namespace RooftopRepairs.Firestore
+namespace RooftopRepairs.Interfaces
 {
     public interface IFireService
     {

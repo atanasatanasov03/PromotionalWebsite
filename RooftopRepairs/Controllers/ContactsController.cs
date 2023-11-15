@@ -5,7 +5,7 @@ using System.Net;
 using RooftopRepairs.Helpers;
 using Google.Cloud.Firestore;
 using NToastNotify;
-using RooftopRepairs.Services;
+using RooftopRepairs.Interfaces;
 
 namespace RooftopRepairs.Controllers
 {
@@ -23,7 +23,7 @@ namespace RooftopRepairs.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Index(InquiryModel model)
+        public IActionResult Index(InquiryViewModel model)
         {
             Console.WriteLine(model.subject + '\n' + model.message);
 

@@ -7,7 +7,9 @@
 </style>
 
 <div class="capsule" id="gallery">
+    <!--Container-->
     <div class="gallery-container d-flex flex-column justify-content-around align-items-center p-3">
+        <!--Carousel-->
         <div class="carousel-container li-blu p-4" style="font-size: 5rem;">
             <div id="imagesCarousel" class="carousel slide carousel-fade w-100 h-100" data-ride="carousel" data-interval="3500" style="overflow: hidden;">
                 <div class="carousel-inner w-100 h-100">
@@ -27,6 +29,7 @@
                         </div>
                     }
                 </div>
+                <!--Carousel buttons-->
                 <button class="carousel-control-prev" type="button" data-bs-target="#imagesCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
@@ -38,32 +41,31 @@
             </div>
         </div>
 
-        <div>
-                <div class="p-4 display-6 gallery-buttons desktop-visible">
-                    <div class="btn-group" role="group" id="radioContainer" aria-label="Basic radio toggle button group">
-                        <input type="radio" class="btn-check" onclick="redirect('Roofs')" name="btnradio" id="Roofs" autocomplete="off">
-                        <label class="btn btn-outline-primary" id="radioBtn" for="Roofs">Ремонт на покриви</label>
+        <!--Images Radio-->
+        <div class="p-4 display-6 gallery-buttons desktop-visible">
+            <div class="btn-group" role="group" id="radioContainer" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" onclick="redirect('Roofs')" name="btnradio" id="Roofs" autocomplete="off">
+                <label class="btn btn-outline-primary" id="radioBtn" for="Roofs">Ремонт на покриви</label>
 
-                        <input type="radio" class="btn-check" onclick="redirect('Waterproofing')" name="btnradio" id="Waterproofing" autocomplete="off">
-                        <label class="btn btn-outline-primary" id="radioBtn" for="Waterproofing">Хидроизолация</label>
+                <input type="radio" class="btn-check" onclick="redirect('Waterproofing')" name="btnradio" id="Waterproofing" autocomplete="off">
+                <label class="btn btn-outline-primary" id="radioBtn" for="Waterproofing">Хидроизолация</label>
 
-                        <input type="radio" class="btn-check" onclick="redirect('Building')" name="btnradio" id="Building" autocomplete="off">
-                        <label class="btn btn-outline-primary" id="radioBtn" for="Building">Изграждане</label>
-                    </div>
-                </div>
+                <input type="radio" class="btn-check" onclick="redirect('Building')" name="btnradio" id="Building" autocomplete="off">
+                <label class="btn btn-outline-primary" id="radioBtn" for="Building">Изграждане</label>
+            </div>
+        </div>
 
-                <div class="gallery-buttons mobile-visible my-5">
-                    <div class="btn-group-vertical" role="group" id="radioContainer" aria-label="Basic radio toggle button group">
-                        <input type="radio" class="btn-check" onclick="redirect('Roofs')" name="btnradio" id="Roofs" autocomplete="off">
-                        <label class="btn btn-outline-primary" id="radioBtn" for="Roofs">Ремонт на покриви</label>
+        <div class="gallery-buttons mobile-visible my-5">
+            <div class="btn-group-vertical" role="group" id="radioContainer" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" onclick="redirect('Roofs')" name="btnradio" id="Roofs" autocomplete="off">
+                <label class="btn btn-outline-primary" id="radioBtn" for="Roofs">Ремонт на покриви</label>
 
-                        <input type="radio" class="btn-check" onclick="redirect('Waterproofing')" name="btnradio" id="Waterproofing" autocomplete="off">
-                        <label class="btn btn-outline-primary" id="radioBtn" for="Waterproofing">Хидроизолация</label>
+                <input type="radio" class="btn-check" onclick="redirect('Waterproofing')" name="btnradio" id="Waterproofing" autocomplete="off">
+                <label class="btn btn-outline-primary" id="radioBtn" for="Waterproofing">Хидроизолация</label>
 
-                        <input type="radio" class="btn-check" onclick="redirect('Building')" name="btnradio" id="Building" autocomplete="off">
-                        <label class="btn btn-outline-primary" id="radioBtn" for="Building">Изграждане</label>
-                    </div>
-                </div>
+                <input type="radio" class="btn-check" onclick="redirect('Building')" name="btnradio" id="Building" autocomplete="off">
+                <label class="btn btn-outline-primary" id="radioBtn" for="Building">Изграждане</label>
+            </div>
         </div>
 
         
@@ -71,9 +73,11 @@
 </div>
 
 <script>
+    $(document).ready(function () {
+        $("#roofBtn").click();
+    });
     function redirect(target) {
         var url = '@Url.Action("__target__", "Gallery")';
         window.location.href = url.replace("__target__", target);
     }
-
 </script>
