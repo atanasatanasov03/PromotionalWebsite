@@ -10,15 +10,15 @@
 </style>
 
 <div class="capsule">
-    <div class="services-container d-flex-column p-5">
-        <div class="carousel-container container-fluid li-blu text-white d-flex flex-row p-4 h-100" style="overflow-y:hidden">
+    <div class="home-container d-flex-column p-5">
+        <div class="carousel-container container-fluid li-blu d-flex justify-content-center text-white d-flex flex-row p-2" style="overflow-y:hidden">
             <div class="row h-100 w-100">
-                <div class="col col-sm-3 d-flex justify-content-start ps-4 pe-3 w-75 h-25">
+                <div class="col col-sm-3 d-flex justify-content-start ps-2 pe-2 w-75 h-25">
                     <div class="m-3 mt-0 fs-1 d-flex justify-content-center align-items-center">
                         @Model.service.serviceName
                     </div>
                 </div>
-                <div class="col col-sm-3 d-flex justify-content-start align-items-center w-25 h-25">
+                <div class="col col-sm-3 d-flex justify-content-start align-items-center p-0 w-25 h-25">
                     <div class="text-start fs-4 my-auto ps-0 me-2">
                         @if(Model.service.servicePrice == "По договаряне")
                         {

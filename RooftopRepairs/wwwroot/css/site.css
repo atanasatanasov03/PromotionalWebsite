@@ -74,10 +74,6 @@ label {
     margin-right: auto;
 }
 
-.sidebar .offcanvas .offcanvas-start .show {
-    background-color: #fff;
-}
-
 .top-bar {
     position: absolute;
     top: 0;
@@ -128,17 +124,13 @@ h5 {
 
 .capsule {
     margin-top: 5rem !important;
+    margin-bottom: 1rem;
 }
 
 .home-container {
     height: 30rem;
     background-color: rgba(54,80,161, 0.93);
-
-}
-
-.services-container {
-    background-color: rgba(54,80,161, 0.93);
-    margin-top: 0;
+    margin-bottom: 3rem;
 }
 
 #detailsTable {
@@ -146,7 +138,7 @@ h5 {
 }
 
 .accordion-container {
-    width: min(1280px, 60w);
+    width: min(1280px, 60vw);
     height: 30rem;
     padding: 3% 3% 3% 3%;
     font-size: max(16px, 1.15rem);
@@ -171,12 +163,13 @@ accordion-header {
 }
 
 .carousel-container {
-    width: min(1280px, 60w);
+    width: min(1280px, 60vw);
     height: 25rem;
 }
 
 img {
     width: 100%;
+    object-fit: cover;
     object-position: top;
 }
 
@@ -189,6 +182,11 @@ img {
     background-color: rgba(255, 255, 255, 0.6);
     color: rgba(54,80,161, 0.93);
     font-size: 1.5rem;
+}
+
+#imagesCarousel {
+    width: 100%;
+    height: 100%;
 }
 
 .carousel-caption {
@@ -274,21 +272,7 @@ table tr td, table tr th {
 .desktop-visible {
     display: inline !important;
 }
-/*
-@media screen and (max-width: 1700px) {
 
-
-}
-
-@media screen and (max-width: 1500px) {
-
-
-}
-
-@media screen and (max-width: 1350px) {
-
-}
-*/
 @media only screen and (max-width: 12000px) {
     body {
         font-size: 75%;
@@ -299,9 +283,29 @@ table tr td, table tr th {
     .global-wrapper {
         width: 80%
     }
+    .per-col1 {
+        width: 40%;
+        height: 90%;
+    }
+    .image-responsive {
+        width: 100%;
+        height: 100%;
+    }
+    .per-col2 {
+        width: 60%;
+        height: 90%;
+    }
 }
 
 @media screen and (max-width: 991px) {
+    .per-col1 {
+        height: 100%;
+        overflow: hidden;
+    }
+    .per-col2 {
+        height: 100%;
+        overflow: hidden;
+    }
     .sidebar {
         background-color: rgba(72, 84, 96, 1);
         max-width: 100vw;
@@ -322,6 +326,13 @@ table tr td, table tr th {
         width: 100% !important;
 
     }
+
+    .row.li-blu {
+        width: 80%;
+        height: 90%;
+        overflow-y: auto;
+    }
+
     .container + .container {
         margin-top: 30px;
     }
@@ -329,10 +340,17 @@ table tr td, table tr th {
     .image-responsive {
         margin-top: 5px;
         margin-bottom: 5px;
+        height: 100%;
     }
 
+    .accordion-container {
+        width: 90%;
+    }
 
-
+    .carousel-container {
+        height: 80%;
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 840px) {
